@@ -95,7 +95,7 @@
                         </div>
                         <div class="right-content">
                             <div class="lt-button">
-                                <a href="property-submit.html" class="btn btn-transparent">Submit Property</a>
+                                <a href="{{ route('register_agent') }}" class="btn btn-transparent">Submit Property</a>
                             </div>
                         </div>
                     </div><!-- /.container -->

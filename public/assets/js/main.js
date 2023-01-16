@@ -71,20 +71,16 @@ jQuery(function ($) {
         $('.counter').counterUp({
             delay: 10,
             time: 1000
-        });    
+        });
     }
 
     // -------------------------------------------------------------
     //  Slick Slider
+<<<<<<< HEAD
     // ------------------------------------------------------------- 
-    if ($('.featured-slider').length > 0) {
-        $(".featured-slider").slick({
-            infinite: true,
-            dots: false,
-            arrows: true,
-            slidesToShow: 1,
+=======
+    // -------------------------------------------------------------
             autoplay: true,
-            autoplaySpeed: 10000,
             slidesToScroll: 1,
             nextArrow: '<i class="fa fa-angle-left" aria-hidden="true"></i>',
             prevArrow: '<i class="fa fa-angle-right" aria-hidden="true"></i>',
@@ -151,8 +147,13 @@ jQuery(function ($) {
                 slidesToShow: 1,
             }
             }
+<<<<<<< HEAD
             ] 
         }); 
+=======
+            ]
+        });
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
     }
     if ($('.brand-slider').length > 0) {
         $(".brand-slider").slick({
@@ -227,8 +228,13 @@ jQuery(function ($) {
                 slidesToShow: 3,
             }
             }
+<<<<<<< HEAD
             ]        
         }); 
+=======
+            ]
+        });
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
     }
     if ($('.team-slider').length > 0) {
         $(".team-slider").slick({
@@ -266,7 +272,11 @@ jQuery(function ($) {
                 slidesToShow: 1,
             }
             }
+<<<<<<< HEAD
             ] 
+=======
+            ]
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
         });
     }
     if ($('.property-details-slider').length > 0) {
@@ -302,10 +312,17 @@ jQuery(function ($) {
                 slidesToShow: 2,
             }
             }
+<<<<<<< HEAD
             ]        
         });
     }
     if ($('.branch-officer-slider').length > 0) { 
+=======
+            ]
+        });
+    }
+    if ($('.branch-officer-slider').length > 0) {
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
     $(".branch-officer-slider").slick({
         infinite: true,
         dots: false,
@@ -318,7 +335,11 @@ jQuery(function ($) {
         prevArrow: '<i class="fa fa-angle-right" aria-hidden="true"></i>',
     });
 }
+<<<<<<< HEAD
 if ($('.project-slider').length > 0) {  
+=======
+if ($('.project-slider').length > 0) {
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
     $(".project-slider").slick({
         infinite: true,
         dots: false,
@@ -354,10 +375,17 @@ if ($('.project-slider').length > 0) {
             slidesToShow: 1,
           }
         }
+<<<<<<< HEAD
         ] 
     }); 
 }           
     if ($('.lt-video a').length > 0) {  
+=======
+        ]
+    });
+}
+    if ($('.lt-video a').length > 0) {
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
         // -------------------------------------------------------------
         //  MagnificPopup
         // -------------------------------------------------------------
@@ -369,20 +397,34 @@ if ($('.project-slider').length > 0) {
         gallery:{
             enabled:true
         }
+<<<<<<< HEAD
         });   
+=======
+        });
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
     }
 
     // -------------------------------------------------------------
     //  tab view change
     // -------------------------------------------------------------
+<<<<<<< HEAD
     if ($('.lt-filter-form .list-view-tab').length > 0) { 
+=======
+    if ($('.lt-filter-form .list-view-tab').length > 0) {
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
         $('.lt-filter-form .list-view-tab').on('click', function() {
             $('.lt-filter-form .list-view-tab').addClass('active');
             $('.lt-filter-form .grid-view-tab').removeClass('active');
             $('.lt-filter-form').removeClass('grid-view-tab').addClass('list-view-tab');
+<<<<<<< HEAD
         });    
     }
     if ($('.lt-filter-form .grid-view-tab').length > 0) {   
+=======
+        });
+    }
+    if ($('.lt-filter-form .grid-view-tab').length > 0) {
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
         $('.lt-filter-form .grid-view-tab').on('click', function() {
             $('.lt-filter-form .grid-view-tab').addClass('active');
             $('.lt-filter-form .list-view-tab').removeClass('active');
@@ -392,8 +434,13 @@ if ($('.project-slider').length > 0) {
 
     // -------------------------------------------------------------
     //  Smooth scrolling
+<<<<<<< HEAD
     // -------------------------------------------------------------    
     if ($('.mouse-icon').length > 0) { 
+=======
+    // -------------------------------------------------------------
+    if ($('.mouse-icon').length > 0) {
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
         $('.mouse-icon').on('click', function() {
             $('html, body').animate({
                 scrollTop: $( $(this).attr('href') ).offset().top
@@ -405,10 +452,17 @@ if ($('.project-slider').length > 0) {
     /*==============================================================*/
     // Slider Animationend
     /*==============================================================*/
+<<<<<<< HEAD
     if ($('#home-slider, #property-carousel').length > 0) { 
         function doAnimations( elems ) {
             var animEndEv = 'webkitAnimationEnd animationend';
             
+=======
+    if ($('#home-slider, #property-carousel').length > 0) {
+        function doAnimations( elems ) {
+            var animEndEv = 'webkitAnimationEnd animationend';
+
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
             elems.each(function () {
                 var $this = $(this),
                     $animationType = $this.data('animation');
@@ -417,33 +471,57 @@ if ($('.project-slider').length > 0) {
                 });
             });
         }
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
         var $myCarousel = $('#home-slider, #property-carousel'),
             $firstAnimatingElems = $myCarousel.find('.item:first').find("[data-animation ^= 'animated']");
 
         $myCarousel.carousel();
+<<<<<<< HEAD
         
         doAnimations($firstAnimatingElems);
         
+=======
+
+        doAnimations($firstAnimatingElems);
+
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
         $myCarousel.carousel('pause');
 
         $myCarousel.on('slide.bs.carousel', function (e) {
             var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
             doAnimations($animatingElems);
+<<<<<<< HEAD
         });  
+=======
+        });
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
     }
 
     /*==============================================================*/
     // niceSelect
     /*==============================================================*/
+<<<<<<< HEAD
     if ($('select').length > 0) { 
         $('select').niceSelect();
     }
+=======
+    // if ($('select').length > 0) {
+    //     $('select').niceSelect();
+    // }
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
 
     /*==============================================================*/
     // TheiaStickySidebar
     /*==============================================================*/
+<<<<<<< HEAD
     if ($('.lt-sticky').length > 0) { 
+=======
+    if ($('.lt-sticky').length > 0) {
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
         $('.lt-sticky')
             .theiaStickySidebar({
                 additionalMarginTop: 0
@@ -453,7 +531,11 @@ if ($('.project-slider').length > 0) {
     /*==============================================================*/
     // scrollTop
     /*==============================================================*/
+<<<<<<< HEAD
     if ($('.menu-sticky').length > 0) { 
+=======
+    if ($('.menu-sticky').length > 0) {
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
         var ltTop = $('.menu-sticky').offset().top;
 
         $(window).scroll(function() {
@@ -488,11 +570,19 @@ if ($('.project-slider').length > 0) {
         e.preventDefault();
         $('html, body').animate({scrollTop:0}, '300');
     });
+<<<<<<< HEAD
   
     /*==============================================================*/
     // toggler menu
     /*==============================================================*/
     if ($('.side-menu-content .tl-toggler').length > 0) { 
+=======
+
+    /*==============================================================*/
+    // toggler menu
+    /*==============================================================*/
+    if ($('.side-menu-content .tl-toggler').length > 0) {
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
         $('.side-menu-content .tl-toggler').click(function() {
             toggleMenu();
         });
@@ -510,7 +600,11 @@ if ($('.project-slider').length > 0) {
     /*==============================================================*/
     // Chart
     /*==============================================================*/
+<<<<<<< HEAD
     if ($('#oneYear').length > 0) { 
+=======
+    if ($('#oneYear').length > 0) {
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
         var ctx = document.getElementById('oneYear');
         var ltChart = new Chart(ctx, {
             type: 'line',
@@ -540,12 +634,20 @@ if ($('.project-slider').length > 0) {
             options: {
                 legend: {
                     display: false,
+<<<<<<< HEAD
                 }, 
+=======
+                },
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
                 scales: {
                     yAxes: [{
                         gridLines: {
                             display:true
+<<<<<<< HEAD
                         }, 
+=======
+                        },
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
                         ticks: {
                             beginAtZero: true,
                             callback: function (value) { if (Number.isInteger(value)) { return value; } },
@@ -568,7 +670,11 @@ if ($('.project-slider').length > 0) {
             }
         });
     }
+<<<<<<< HEAD
     if ($('#thirtyDays').length > 0) { 
+=======
+    if ($('#thirtyDays').length > 0) {
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
         var ctx = document.getElementById('thirtyDays');
         var ltChart = new Chart(ctx, {
             type: 'line',
@@ -598,16 +704,28 @@ if ($('.project-slider').length > 0) {
             options: {
                 legend: {
                     display: false,
+<<<<<<< HEAD
                 }, 
+=======
+                },
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
                 scales: {
                     yAxes: [{
                         gridLines: {
                             display:true
+<<<<<<< HEAD
                         }, 
                         ticks: {
                             beginAtZero: true,
                             callback: function (value) { if (Number.isInteger(value)) { return value; } },
                             
+=======
+                        },
+                        ticks: {
+                            beginAtZero: true,
+                            callback: function (value) { if (Number.isInteger(value)) { return value; } },
+
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
                         }
                     }]
                 },
@@ -628,7 +746,11 @@ if ($('.project-slider').length > 0) {
         });
     }
 
+<<<<<<< HEAD
     if ($('#monthlyPrice').length > 0) { 
+=======
+    if ($('#monthlyPrice').length > 0) {
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
 
     var ctx = document.getElementById('monthlyPrice');
     var ltChart = new Chart(ctx, {
@@ -659,16 +781,28 @@ if ($('.project-slider').length > 0) {
         options: {
             legend: {
                 display: false,
+<<<<<<< HEAD
             }, 
+=======
+            },
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
             scales: {
                 yAxes: [{
                     gridLines: {
                         display:true
+<<<<<<< HEAD
                     }, 
                     ticks: {
                         beginAtZero: true,
                         callback: function (value) { if (Number.isInteger(value)) { return value; } },
                         
+=======
+                    },
+                    ticks: {
+                        beginAtZero: true,
+                        callback: function (value) { if (Number.isInteger(value)) { return value; } },
+
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
                     }
                 }]
             },
@@ -693,7 +827,11 @@ if ($('.project-slider').length > 0) {
     /*==============================================================*/
     // Class change when select an option
     /*==============================================================*/
+<<<<<<< HEAD
     if ($('#select-chart').length > 0) { 
+=======
+    if ($('#select-chart').length > 0) {
+>>>>>>> 3fdb90dba2352a46cf00a7e27aac61a773fc3041
     $('#select-chart').change(function(){
         $(this).find("option:selected").each(function(){
             var optionValue = $(this).attr("value");

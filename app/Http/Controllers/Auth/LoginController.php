@@ -4,9 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Session;
 
 class LoginController extends Controller
 {
@@ -21,6 +22,31 @@ class LoginController extends Controller
     |
     */
 
+    public function login(Request $request)
+    {
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password, 'user_type' => 'agent'])) {
+            // The user is active, not suspended, and exists.
+            //    if (Auth::user()->is_first_time == 1) {
+            //     return redirect()->intended('/password/change');
+            // } else {
+                return redirect()->intended('/agent');
+            // }
+
+        } else if (Auth::attempt(['email' => $request->email, 'password' => $request->password, 'user_type' => 'admin'])) {
+            // The user is active, not suspended, and exists.
+
+            //    if (Auth::user()->is_first_time == 1) {
+            //     return redirect()->intended('/password/change');
+            // } else {
+                return redirect()->intended('/admin');
+            // }
+
+        } else {
+            //  return redirect()->back();
+            return redirect()->back()->withErrors(["exception" => 'These credentials do not match our records']);
+
+        }
+    }
     use AuthenticatesUsers;
 
     /**
@@ -28,28 +54,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo;//= RouteServiceProvider::HOME;
-
-     public function redirectTo()
-    {
-        //  dd(Auth::user()->user_type);
-        switch (Auth::user()->user_type) {
-            case "admin":
-                    $this->redirectTo = '/admin';
-              
-                return $this->redirectTo;
-                break;
-
-            case "individual":
-                    $this->redirectTo = '/password/change';
-                return $this->redirectTo;
-                break;
-
-            default:
-                $this->redirectTo = '/logout';
-                return $this->redirectTo;
-        }
-    }
+    // protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
@@ -60,10 +65,9 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-
     public function logout()
     {
-        Session::flush();
+       Session::flush();
         Auth::logout();
 
         return redirect('/login');
